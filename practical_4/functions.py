@@ -33,7 +33,7 @@ def weather_generator(mean: float, std: float, n: int):
     return data
 
 # Write a function to count the anomalies
-def count_anomalies(data: np.array
+def count_anomalies(data: np.array,
                     threshold: float):
     """
     Function which counts the number of anomalies in a
