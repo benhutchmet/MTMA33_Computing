@@ -31,3 +31,38 @@ def weather_generator(mean: float, std: float, n: int):
     plt.show()
 
     return data
+
+# Write a function to count the anomalies
+def count_anomalies(data: np.array
+                    threshold: float):
+    """
+    Function which counts the number of anomalies in a
+    time series of temperature anomalies which exceed
+    a user defined threshold.
+
+    Args:
+        data (np.array): The time series of temperature anomalies
+        threshold (float): The threshold to count anomalies above
+
+    Returns:
+        count (int): The number of anomalies above the threshold
+    """
+
+    # Assert that the data is a numpy array
+    assert isinstance(data, np.ndarray), "Data must be a numpy array"
+
+    # Assert that the threshold is a float
+    assert isinstance(threshold, float), "Threshold must be a float"
+
+    # Count the number of anomalies
+    count = 0
+
+    # Loop over the data
+    for i in range(len(data)):
+        if data[i] > threshold:
+            count += 1
+
+    # Alternative method
+    # count = len(data[data > threshold])
+
+    return count
