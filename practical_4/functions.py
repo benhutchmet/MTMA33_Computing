@@ -57,9 +57,10 @@ def count_anomalies(data: np.array,
     # Count the number of anomalies
     count = 0
 
-    # Loop over the data
-    for i in range(len(data)):
-        if data[i] > threshold:
+    # Use a for loop to count the number of anomalies
+    # above the threshold
+    for i, value in enumerate(data):
+        if value > threshold:
             count += 1
 
     # Alternative method
