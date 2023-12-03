@@ -12,6 +12,9 @@ __pycache__/
 # .txt files
 *.txt
 
+# Ignore .drawio files
+*.drawio
+
 # Distribution / packaging
 .Python
 build/
